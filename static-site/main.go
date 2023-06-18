@@ -35,5 +35,6 @@ func handleFormSubmission(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Fprintf(w, "<h1> Website: %v </h1>", resp.Body)
 		fmt.Fprintf(w, "<h2> Website but smaller font: %v </h2>", resp.Body)
+		// TODO - figure out why we're getting a - Get "": unsupported protocol scheme "" - error
 	}
 }
