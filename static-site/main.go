@@ -33,7 +33,13 @@ func handleFormSubmission(w http.ResponseWriter, r *http.Request) {
 			log.Fatalln(err)
 		}
 
-		fmt.Fprintf(w, "<h1> Website: %v </h1>", *resp)
+		mydef := true
+
+		if mydef {
+			fmt.Fprintf(w, "<h1> Website: %v </h1>", *resp)
+		} else {
+			fmt.Fprintf(w, "<h1> Not a website: %v </h1>", *resp)
+		}
 		// TODO - figure out why we're getting a - Get "": unsupported protocol scheme "" - error
 	}
 }
